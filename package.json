@@ -1,0 +1,27 @@
+{
+  "name": "v-dashboard",
+  "version": "0.0.1",
+  "description": "A New Dashboard based on vue",
+  "main": "main.js",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cocowool/vDashboard.git"
+  },
+  "keywords": [
+    "Dashboard",
+    "vue"
+  ],
+  "author": "Green Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cocowool/vDashboard/issues"
+  },
+  "homepage": "https://github.com/cocowool/vDashboard#readme"
+}
