@@ -4,9 +4,13 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import './main.css'
 import Icon from './icon_service.gif'
 import Data from './bsuser_utf8.json'
+import whoAmI from './user.js'
 
 function component() {
     let element = document.createElement('div');
+    var btn = document.createElement('button');
+
+    btn.onclick = whoAmI;
 
     element.innerHTML = _.join(['Hello', 'webpack!'], ' ');
     element.classList.add('vd-title')
@@ -16,6 +20,7 @@ function component() {
 
     // element.appendChild(myIcon);
     console.log(Data);
+    element.appendChild(btn);
 
     return element;
 }

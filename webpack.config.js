@@ -1,7 +1,18 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        app: './src/index.js',
+        user: './src/user.js'
+    },
+    plugins: [
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({
+            title: 'Output Management'
+        })
+    ],
     mode: 'development',
     // plugins: [
     //     new webpack.ProvidePlugin({
@@ -10,7 +21,7 @@ module.exports = {
     //     })
     // ],
     output: {
-        filename: 'main.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
