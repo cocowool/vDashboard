@@ -4,13 +4,24 @@
   "description": "A New Dashboard based on vue",
   "main": "main.js",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
+    "popper.js": "^1.14.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "css-loader": "^1.0.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "npm-run-all --parallel watch docs-server"
   },
+  "style": "dist/css/bootstrap.css",
+  "sass": "scss/bootstrap.scss",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cocowool/vDashboard.git"
@@ -19,7 +30,7 @@
     "Dashboard",
     "vue"
   ],
-  "author": "Green Wang",
+  "author": "Green Wang <cocowool@qq.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cocowool/vDashboard/issues"
