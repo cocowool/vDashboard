@@ -14,15 +14,14 @@ module.exports = {
         })
     ],
     mode: 'development',
-    // plugins: [
-    //     new webpack.ProvidePlugin({
-    //         $: "jquery",
-    //         jQuery: "jquery"
-    //     })
-    // ],
+    devtool: 'inline-source-map',  
+    devServer: {
+        contentBase: './dist'
+    },
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
     },
     module: {
         rules: [
