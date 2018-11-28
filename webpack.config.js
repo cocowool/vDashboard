@@ -14,7 +14,10 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin()
     ],
-    mode: 'development',
+    mode: 'production',
+    // optimization: {
+    //     usedExports: true
+    // },
     devtool: 'inline-source-map',  
     devServer: {
         contentBase: './dist',
