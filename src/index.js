@@ -26,3 +26,10 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+if(module.hot){
+    module.hot.accept('./user.js', function(){
+        console.log("Accepting the updated whoAmI module!");
+        whoAmI();
+    });
+}
