@@ -27,6 +27,12 @@ function component(){
     element.appendChild(br);
     element.appendChild(button);
 
+    button.onclick = e => import('./print').then(module=>{
+        var print = module.default;
+
+        print();
+    });
+
     return element;
 
     // var myIcon = new Image();
