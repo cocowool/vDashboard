@@ -13,11 +13,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Output Management and Caching'
         }),
+        new webpack.HashedModuleIdsPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
     output: {
         filename: '[name].[hash].js',
-        chunkFilename: '[name].bundle.js',
+        // chunkFilename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/'
     },
