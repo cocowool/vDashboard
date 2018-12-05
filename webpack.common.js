@@ -11,21 +11,29 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Output Management'
+            title: 'Output Management and Caching'
         }),
         new webpack.HotModuleReplacementPlugin()
     ],
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].[hash].js',
         chunkFilename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/'
     },
-    // optimization: {
-    //     splitChunks: {
-    //         chunks: 'all'
-    //     }
-    // },
+    optimization: {
+        runtimeChunk: 'single',
+        splitChunks: {
+            // chunks: 'all'
+            cacheGroups: {
+                vendor: {
+                    test: /[\\]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all'
+                }
+            }
+        }
+    },
     module: {
         rules: [
             { test: /\.css$/, use: ['style-loader', 'css-loader']},
