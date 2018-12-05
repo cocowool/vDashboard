@@ -14,7 +14,10 @@ module.exports = {
             title: 'Output Management and Caching'
         }),
         new webpack.HashedModuleIdsPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.ProvidePlugin({
+            _: 'loadsh'
+        })
     ],
     output: {
         filename: '[name].[hash].js',

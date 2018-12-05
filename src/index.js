@@ -3,7 +3,7 @@ import _ from 'lodash'
 // import 'bootstrap/dist/js/bootstrap.min.js'
 import './main.css'
 import Icon from './icon_service.gif'
-// import Data from './bsuser_utf8.json'
+import Data from './bsuser_utf8.json'
 import whoAmI from './user.js'
 
 if(process.env.NODE_ENV !== 'production'){
