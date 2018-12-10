@@ -5,6 +5,9 @@
     font-style: normal;
 }
 
+body {
+    background: gray;
+}
 
 .vd-container {
     margin:0 auto;
