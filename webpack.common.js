@@ -14,7 +14,9 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             // title: 'Progressive web application',
-            template: './src/index.html'
+            template: './src/index.html',
+            hash: true,                             //是否为注入的资源添加hash码
+            showErrors: true                        //默认true；是否将错误信息输出到html页面中。
         }),
         new webpack.HashedModuleIdsPlugin(),
         new webpack.HotModuleReplacementPlugin()
@@ -35,19 +37,19 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/'
     },
-    optimization: {
-        runtimeChunk: 'single',
-        splitChunks: {
-            // chunks: 'all'
-            cacheGroups: {
-                vendor: {
-                    test: /[\\]node_modules[\\/]/,
-                    name: 'vendors',
-                    chunks: 'all'
-                }
-            }
-        }
-    },
+    // optimization: {
+    //     runtimeChunk: 'single',
+    //     splitChunks: {
+    //         // chunks: 'all'
+    //         cacheGroups: {
+    //             vendor: {
+    //                 test: /[\\]node_modules[\\/]/,
+    //                 name: 'vendors',
+    //                 chunks: 'all'
+    //             }
+    //         }
+    //     }
+    // },
     module: {
         rules: [
             { test: /\.css$/, use: ['style-loader', 'css-loader']},

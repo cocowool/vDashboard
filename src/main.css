@@ -1,19 +1,8 @@
-@font-face {
-    font-family: 'MyFont';
-    src: url('./Verdana.ttf') format('ttf');
-    font-weight:600;
-    font-style: normal;
+#menu {
+    background-color: black;
+    color:#fff;
 }
 
-body {
-    background: gray;
-}
-
-.vd-container {
-    margin:0 auto;
-}
-
-.vd-title {
-    color: red;
-    font-family: 'MyFont';
+#menu a {
+    color: #fff;
 }
