@@ -13,17 +13,18 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Progressive web application'
+            // title: 'Progressive web application',
+            template: './src/index.html'
         }),
         new webpack.HashedModuleIdsPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.ProvidePlugin({
-            _: 'loadsh'
-        }),
-        new WorkboxPlugin.GenerateSW({
-            clientsClaim: true,
-            skipWaiting: true
-        })//,
+        new webpack.HotModuleReplacementPlugin()
+        // new webpack.ProvidePlugin({
+        //     _: 'loadsh'
+        // }),
+        // new WorkboxPlugin.GenerateSW({
+        //     clientsClaim: true,
+        //     skipWaiting: true
+        // }),
         // new ExtractTextPlugin("../css/[name].css", {
         //     allChunks: true
         // })
