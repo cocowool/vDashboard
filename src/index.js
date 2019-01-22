@@ -1,5 +1,6 @@
 // import _ from 'lodash'
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap'
+// import 'bootstrap/dist/css/bootstrap.css'
 import './main.css'
 // import 'bootstrap/dist/js/bootstrap.min.js'
 // import Icon from './icon_service.gif'

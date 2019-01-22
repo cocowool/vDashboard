@@ -1,7 +1,7 @@
 {
   "name": "v-dashboard",
   "version": "0.0.1",
-  "description": "A New Dashboard based on vue",
+  "description": "A New Dashboard based on vue and bootstrap",
   "main": "main.js",
   "sideEffects": false,
   "dependencies": {},
